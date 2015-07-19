@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
-<title>Loading and preprocessing the data</title>
+<title>Reproducible Research: Peer Assessment 1</title>
 
 <script type="text/javascript">
 window.onload = function() {
@@ -201,6 +201,8 @@ hr {
 </head>
 
 <body>
+<h1>Reproducible Research: Peer Assessment 1</h1>
+
 <h2>Loading and preprocessing the data</h2>
 
 <p>Read the CSV data from the raw file:</p>
@@ -210,7 +212,7 @@ hr {
 
 <h2>What is mean total number of steps taken per day?</h2>
 
-<p>Use the tapply function to get the total number of steps for each day. </p>
+<p>Use the tapply function to get the total number of steps for each day: </p>
 
 <pre><code class="r">StepsPerDay &lt;- tapply(data$steps, data$date, sum)
 </code></pre>
@@ -220,16 +222,14 @@ hr {
 <pre><code class="r">MeanStepsPerDay &lt;- mean(StepsPerDay, na.rm = TRUE)
 </code></pre>
 
-<pre><code>## [1] 10766.19
-</code></pre>
+<p>The resulting mean is 1.0766189 &times; 10<sup>4</sup>. </p>
 
 <p>Calculate the median steps using the medain function, and setting na.rm = TRUE to exclude any &ldquo;NA&rdquo; values:</p>
 
 <pre><code class="r">MedianStepsPerDay &lt;- median(StepsPerDay, na.rm = TRUE)
 </code></pre>
 
-<pre><code>## [1] 10765
-</code></pre>
+<p>The resulting median is 10765. </p>
 
 <h2>What is the average daily activity pattern?</h2>
 

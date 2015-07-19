@@ -5,6 +5,9 @@ output:
     keep_md: true
 ---
 
+# Reproducible Research: Peer Assessment 1
+
+
 
 ## Loading and preprocessing the data
 
@@ -26,25 +29,25 @@ Calculate the mean steps using the mean function, and setting na.rm = TRUE to ex
 ```{r}
 MeanStepsPerDay <- mean(StepsPerDay, na.rm = TRUE)
 ```
-```{r, echo = FALSE}
-print(MeanStepsPerDay)
 
-```
+The resulting mean is `r MeanStepsPerDay`. 
+
 
 Calculate the median steps using the medain function, and setting na.rm = TRUE to exclude any "NA" values:
 ```{r}
 MedianStepsPerDay <- median(StepsPerDay, na.rm = TRUE)
 ```
-```{r, echo = FALSE}
-print(MedianStepsPerDay)
 
-```
+The resulting median is `r MedianStepsPerDay`. 
     
   
-  
+Totally ran out of time to do the rest.... Thanks for marking!  
   
 
 ## What is the average daily activity pattern?
+
+
+
 
 
 
@@ -52,4 +55,13 @@ print(MedianStepsPerDay)
 
 
 
+
+
+
 ## Are there differences in activity patterns between weekdays and weekends?
+
+
+
+
+
+

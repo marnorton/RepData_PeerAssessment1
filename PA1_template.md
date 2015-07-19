@@ -5,6 +5,9 @@ output:
     keep_md: true
 ---
 
+# Reproducible Research: Peer Assessment 1
+
+
 
 ## Loading and preprocessing the data
 
@@ -17,7 +20,7 @@ data <- read.csv("activity.csv")
 
 ## What is mean total number of steps taken per day?
 
-Use the tapply function to get the total number of steps for each day. 
+Use the tapply function to get the total number of steps for each day: 
 
 ```r
 StepsPerDay <- tapply(data$steps, data$date, sum)
@@ -30,9 +33,8 @@ Calculate the mean steps using the mean function, and setting na.rm = TRUE to ex
 MeanStepsPerDay <- mean(StepsPerDay, na.rm = TRUE)
 ```
 
-```
-## [1] 10766.19
-```
+The resulting mean is 1.0766189 &times; 10<sup>4</sup>. 
+
 
 Calculate the median steps using the medain function, and setting na.rm = TRUE to exclude any "NA" values:
 
@@ -40,9 +42,7 @@ Calculate the median steps using the medain function, and setting na.rm = TRUE t
 MedianStepsPerDay <- median(StepsPerDay, na.rm = TRUE)
 ```
 
-```
-## [1] 10765
-```
+The resulting median is 10765. 
     
   
   
