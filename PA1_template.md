@@ -8,19 +8,19 @@ output:
 
 ## Loading and preprocessing the data
 
+Set global variable for echo to TRUE:
+
+
+
 Read the CSV data from the raw file:
-```{r}
+
+```r
 data <- read.csv("activity.csv")
 ```
 
 ## What is mean total number of steps taken per day?
 
-Calculate the mean steps using the mean function, and setting na.rm = TRUE to exclude any "NA" values:
-```{r}
-mean <- mean(data$steps, na.rm = TRUE)
 
-```
-  
 
 ## What is the average daily activity pattern?
 
