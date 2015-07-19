@@ -23,16 +23,25 @@ Use the tapply function to get the total number of steps for each day.
 StepsPerDay <- tapply(data$steps, data$date, sum)
 ```
 
+
 Calculate the mean steps using the mean function, and setting na.rm = TRUE to exclude any "NA" values:
 
 ```r
 MeanStepsPerDay <- mean(StepsPerDay, na.rm = TRUE)
 ```
-  
+
+```
+## [1] 10766.19
+```
+
 Calculate the median steps using the medain function, and setting na.rm = TRUE to exclude any "NA" values:
 
 ```r
-MeanStepsPerDay <- mean(StepsPerDay, na.rm = TRUE)
+MedianStepsPerDay <- median(StepsPerDay, na.rm = TRUE)
+```
+
+```
+## [1] 10765
 ```
     
   
