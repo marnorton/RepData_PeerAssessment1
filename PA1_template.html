@@ -203,14 +203,27 @@ hr {
 <body>
 <h2>Loading and preprocessing the data</h2>
 
-<p>Set global variable for echo to TRUE:</p>
-
 <p>Read the CSV data from the raw file:</p>
 
 <pre><code class="r">data &lt;- read.csv(&quot;activity.csv&quot;)
 </code></pre>
 
 <h2>What is mean total number of steps taken per day?</h2>
+
+<p>Use the tapply function to get the total number of steps for each day. </p>
+
+<pre><code class="r">StepsPerDay &lt;- tapply(data$steps, data$date, sum)
+</code></pre>
+
+<p>Calculate the mean steps using the mean function, and setting na.rm = TRUE to exclude any &ldquo;NA&rdquo; values:</p>
+
+<pre><code class="r">MeanStepsPerDay &lt;- mean(StepsPerDay, na.rm = TRUE)
+</code></pre>
+
+<p>Calculate the median steps using the medain function, and setting na.rm = TRUE to exclude any &ldquo;NA&rdquo; values:</p>
+
+<pre><code class="r">MeanStepsPerDay &lt;- mean(StepsPerDay, na.rm = TRUE)
+</code></pre>
 
 <h2>What is the average daily activity pattern?</h2>
 
